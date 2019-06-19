@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+	<head>
+			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="Colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Alice The Chatbot || For Depression Analysis</title>
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
+		<!--
+		CSS
+		============================================= -->
+		<link rel="stylesheet" href="css/linearicons.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/nice-select.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/main.css">
+		<style>
+
+				.question{
+					font-weight: 600;
+				}
+				.answers {
+					margin-bottom: 20px;
+				}
+				#submit{
+					font-family: sans-serif;
+					font-size: 20px;
+					background-color: #297;
+					color: #fff;
+					border: 0px;
+					border-radius: 3px;
+					padding: 20px;
+					cursor: pointer;
+					margin-bottom: 20px;
+				}
+				#submit:hover{
+					background-color: #3a8;
+				}
+				hr.style14 { 
+				  border: 0; 
+				  height: 4px; 
+				  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+				  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+				  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+				  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+				}
+				</style>
+	</head>
+	<body>
+	<div class="oz-body-wrap">
+		<!-- Start Header Area -->
+		<header class="default-header generic-header">
+			<div class="container-fluid">
+				<div class="header-wrap">
+					<div class="header-top d-flex justify-content-between align-items-center">
+						<div class="logo">
+							<a href="index.html"><img src="img/logo.png" alt=""></a>
+						</div>
+						<div class="main-menubar d-flex align-items-center">
+							<nav class="hide">
+									<a href="index.html">Home</a>
+									<a href="chatbot.html">Chatbot</a>
+									<a href="screening.html">Depression Screening Test</a>
+									<a href="team.html">Our Team</a>
+								</nav>
+							<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- End Header Area -->
+		<!-- Start Sample Area -->
+		<section class="sample-text-area">
+			<div class="container" style="text-align: justify;">
+					<h4 styele>Over the last two weeks, how often have you been bothered by any of the following problems?</h4><br>
+					<br><hr class="style14" style="margin-top: -20px;">
+					<div>
+					<strong>1. Little interest or pleasure in doing things?</strong>
+					<br>
+					<label><input type="radio" onclick="getData1(0)" value="0" name='1'>Not at all</label>
+					<label><input type="radio" onclick="getData1(1)" value="1" name='1'>Several days</label>
+					<label><input type="radio" onclick="getData1(2)" value="2" name='1'>More than half the days</label>
+					<label><input type="radio" onclick="getData1(3)" value="3" name='1'>Nearly everyday</label>
+					</div>
+					<br>
+					<div>
+					<strong>2. Feeling down, depressed, or hopeless?</strong>
+					<br>
+					<label><input type="radio" onclick="getData2(0)" value="0" name='2'>Not at all</label>
+					<label><input type="radio" onclick="getData2(1)" value="1" name='2'>Several days</label>
+					<label><input type="radio" onclick="getData2(2)" value="2" name='2'>More than half the days</label>
+					<label><input type="radio" onclick="getData2(3)" value="3" name='2'>Nearly everyday</label>
+					</div>
+					<br>
+					<div>
+					<strong>3. Trouble falling or staying asleep, or sleeping too much?</strong>
+					<br>
+					<label><input type="radio" onclick="getData3(0)" value="0" name='3'>Not at all</label>
+					<label><input type="radio" onclick="getData3(1)" value="1" name='3'>Several days</label>
+					<label><input type="radio" onclick="getData3(2)" value="2" name='3'>More than half the days</label>
+					<label><input type="radio" onclick="getData3(3)" value="3" name='3'>Nearly everyday</label>
+					</div><br>
+					<div>
+					<strong>4. Feeling tired or having little energy?</strong>
+					<br>
+					<label><input type="radio" onclick="getData4(0)" value="0" name='4'>Not at all</label>
+					<label><input type="radio" onclick="getData4(1)" value="1" name='4'>Several days</label>
+					<label><input type="radio" onclick="getData4(2)" value="2" name='4'>More than half the days</label>
+					<label><input type="radio" onclick="getData4(3)" value="3" name='4'>Nearly everyday</label>
+					</div>
+					<br>
+					<div>
+					<strong>5. Poor appetite or overeating?</strong>
+					<br>
+					<label><input type="radio" onclick="getData5(0)" value="0" name='5'>Not at all</label>
+					<label><input type="radio" onclick="getData5(1)" value="1" name='5'>Several days</label>
+					<label><input type="radio" onclick="getData5(2)" value="2" name='5'>More than half the days</label>
+					<label><input type="radio" onclick="getData5(3)" value="3" name='5'>Nearly everyday</label>
+					</div>
+					<br>
+					<div>
+					<strong>6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down?</strong>
+					<br>
+					<label><input type="radio" onclick="getData6(0)" value="0" name='6'>Not at all</label>
+					<label><input type="radio" onclick="getData6(1)" value="1" name='6'>Several days</label>
+					<label><input type="radio" onclick="getData6(2)" value="2" name='6'>More than half the days</label>
+					<label><input type="radio" onclick="getData6(3)" value="3" name='6'>Nearly everyday</label>
+					</div>
+					<br><div>
+					<strong>7. Trouble concentrating on things, such as reading the newspaper or watching television?</strong>
+					<br>
+					<label><input type="radio" onclick="getData7(0)" value="0" name='7'>Not at all</label>
+					<label><input type="radio" onclick="getData7(1)" value="1" name='7'>Several days</label>
+					<label><input type="radio" onclick="getData7(2)" value="2" name='7'>More than half the days</label>
+					<label><input type="radio" onclick="getData7(3)" value="3" name='7'>Nearly everyday</label>
+					</div>
+					<br><div>
+					<strong>8. Moving or speaking so slowly that other people could have noticed?
+					Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?</strong>
+					<br>
+					<label><input type="radio" onclick="getData8(0)" value="0" name='8'>Not at all</label>
+					<label><input type="radio" onclick="getData8(1)" value="1" name='8'>Several days</label>
+					<label><input type="radio" onclick="getData8(2)" value="2" name='8'>More than half the days</label>
+					<label><input type="radio" onclick="getData8(3)" value="3" name='8'>Nearly everyday</label>
+					</div>
+					<br><div>
+					<strong>9. Thoughts that you would be better off dead, or of hurting yourself in some way?</strong>
+					<br>
+					<label><input type="radio" onclick="getData9(0)" value="0" name='9'>Not at all</label>
+					<label><input type="radio" onclick="getData9(1)" value="1" name='9'>Several days</label>
+					<label><input type="radio" onclick="getData9(2)" value="2" name='9'>More than half the days</label>
+					<label><input type="radio" onclick="getData9(3)" value="3" name='9'>Nearly everyday</label>
+					</div>
+					<br>
+					<div class="text-right" style="margin-right: 50px;">
+						<button onclick="resultPop()" class="btn btn-primary btn-lg">View Result</button>
+						<br><br><br>
+						<small>source: Patient Health Questionnaire (PHQ-9)</small>
+					</div>
+					
+					<!-- <label> Your score is: <span id="pip"> </span> </label><br>
+					<label> Depression Severity: <span id="pi"> </span> </label><br>
+					<label> count: <span id="count"> </span> </label><br><br>
+					<label><i>Note: Validity has been assessed against an independent structured mental health professional (MHP) interview. PHQ-9 score ≥10 had a sensitivity of 88% and a specificity of 88% for major depression. </i></label> -->
+					</body>
+					<script>
+					var f1=0;
+					var f2=0;
+					var f3=0;
+					var f4=0; 
+					var f5=0;
+					var f6=0;
+					var f7=0;
+					var f8=0;
+					var f9=0;
+					var a= 0;
+					var b= 0;
+					var c= 0;
+					var d= 0;
+					var e= 0;
+					var f= 0;
+					var g= 0;
+					var h= 0;
+					var i= 0;
+					var sum=0;
+					var count=0;
+					function getData1(data){
+					 a = data;
+					
+					 if(f1==0){
+						 count=count+1;
+						 f1=1;
+					 }
+					 result();
+					
+					}
+					function getData2(data){
+					 b = data;
+					
+					 if(f2==0){
+						 count=count+1;
+						 f2=1;
+					 }
+					 result();
+					}
+					function getData3(data){
+					 c = data;
+					
+					 if(f3==0){
+						 count=count+1;
+						 f3=1;
+					 }
+					 result();
+					}
+					function getData4(data){
+					 d = data;
+					 if(f4==0){
+						 count=count+1;
+						 f4=1;
+					 }
+					result();
+					}
+					function getData5(data){
+					 e = data;
+					 if(f5==0){
+						 count=count+1;
+						 f5=1;
+					 }
+					result();
+					}
+					function getData6(data){
+					 f = data;
+					 if(f6==0){
+						 count=count+1;
+						 f6=1;
+					 }
+					result();
+					}
+					function getData7(data){
+					 g = data;
+					 if(f7==0){
+						 count=count+1;
+						 f7=1;
+					 }
+					result();
+					}
+					function getData8(data){
+					 h = data;
+					 if(f8==0){
+						 count=count+1;
+						 f8=1;
+					 }
+					result();
+					}
+					function getData9(data){
+					 i = data;
+					 if(f9==0){
+						 count=count+1;
+						 f9=1;
+					 }
+					result();
+					}
+					function result(){
+					 sum = a+b+c+d+e+f+g+h+i;
+					// if (a == 0 || b == 0 || c == 0 || d == 0 || e == 0 || f == 0 || g == 0 || h == 0 || i == 0){
+					//      count = count + 1;
+					document.getElementById('count').innerHTML = count;
+					// }
+					document.getElementById('pip').innerHTML = sum;
+					if (sum <= 4) {
+					document.getElementById('pi').innerHTML = "None";
+					exit();
+					}
+					if (5 <= sum && sum <= 9) {
+					document.getElementById('pi').innerHTML = "Mild";
+					exit();
+					}
+					if (10 <= sum && sum <= 14) {
+					document.getElementById('pi').innerHTML = "Moderate";
+					exit();
+					}
+					if (12 <= sum && sum <= 19) {
+					document.getElementById('pi').innerHTML = "Moderately severe";
+					exit();
+					}
+					if (20 <= sum && sum <= 27) {
+					document.getElementById('pi').innerHTML = "Severe";
+					exit();
+					}
+					
+					
+					}
+					
+					function resultPop(){
+						if (count==9){ 
+							if (sum <= 4) {
+								swal("Your screening results indicate that you have few or no symptoms of depression.");
+								exit();
+							}
+							else if (5 <= sum && sum <= 9) {
+								swal("Your screening results indicate that you have minimal symptoms of depression. You should monitor any changes that may result in higher scores in the future and consider speaking with a medical professional if there are changes. ");
+								exit();
+							}
+							else if (10 <= sum && sum <= 14) {
+								swal("Your screening results are consistent with some symptoms of depression. You may want to speak with a health care provider about these results, and whether you would benefit from specific treatment for depression.");
+								exit();
+							}
+							else if (12 <= sum && sum <= 19) {
+								swal("Your screening results are consistent with several symptoms of depression. You are advised to speak with a health care provider about these results, and whether you would benefit from specific treatment for depression.");
+								exit();
+							}
+							else if (20 <= sum && sum <= 27) {
+								swal("Your screening results indicate that you may be at risk for harming yourself or someone else. You are advised to speak with a health care provider about these results, and whether you would benefit from specific treatment for depression.");
+								exit();
+							}
+							else{
+								swal("internal Error");
+								exit(); 
+							}
+							}
+						else{
+							swal("Please fill out  all field.");
+							exit();
+					
+						} 
+					}
+					</script>
+			</div>
+		</section>
+		<!-- End Sample Area -->
+		</div>
+		
+		<!-- End Footer Area -->
+		<script src="js/vendor/jquery-2.2.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/jquery.ajaxchimp.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.nice-select.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/main.js"></script>
+</body>
+</html>
