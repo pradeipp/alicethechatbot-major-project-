@@ -6,7 +6,7 @@ Flask-SocketIO==3.0.1
 gunicorn==19.9.0
 Jinja2==2.10
 naive-bayes==0.1.1
-nltk==3.3
+nltk==3.4.5
 numpy==1.14.1
 oauthlib==2.1.0
 pandas==0.22.0
